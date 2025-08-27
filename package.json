@@ -1,0 +1,16 @@
+{
+  "name": "harmony-key",
+  "version": "1.0.0",
+  "description": "A web application that plays harmonies when keys are pressed",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8081",
+    "dev": "npx http-server -p 8081"
+  },
+  "keywords": ["music", "harmony", "chord", "web-audio"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

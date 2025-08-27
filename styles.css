@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    max-width: 800px;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.chord-display {
+    background: rgba(255,255,255,0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+#current-chord {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#chord-notes {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.controls {
+    margin-bottom: 2rem;
+}
+
+.chord-type-selector {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.chord-type {
+    padding: 0.75rem 1.5rem;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.chord-type:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.chord-type.active {
+    background: rgba(255,255,255,0.4);
+    border-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.keyboard-guide {
+    background: rgba(255,255,255,0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.keyboard-guide h3 {
+    margin-bottom: 1rem;
+}
+
+.key-map {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+
+.visual-keyboard {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.piano-wrapper {
+    position: relative;
+    margin: 2rem auto;
+}
+
+.white-keys-container {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+}
+
+.key-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.key-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding-bottom: 10px;
+}
+
+.white-key {
+    background: rgba(255,255,255,0.9);
+    border: 2px solid rgba(255,255,255,1);
+    min-height: 154px;
+    min-width: 60px;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.black-key {
+    background: rgba(30,30,30,0.9);
+    border: 2px solid rgba(0,0,0,1);
+    min-height: 80px;
+    min-width: 40px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.positioned-black-key {
+    position: absolute;
+    right: -22px;
+    top: 0;
+    z-index: 10;
+}
+
+.white-key:hover {
+    background: rgba(255,255,255,1);
+}
+
+.black-key:hover {
+    background: rgba(50,50,50,0.9);
+}
+
+.white-key.active {
+    background: rgba(200,200,200,1);
+    transform: translateY(2px);
+}
+
+.black-key.active {
+    background: rgba(80,80,80,1);
+    transform: translateY(2px);
+}
+
+.white-key .key-letter {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.black-key .key-letter {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.white-key .key-note {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.black-key .key-note {
+    font-size: 0.7rem;
+    opacity: 0.9;
+}

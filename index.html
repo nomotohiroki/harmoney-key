@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Key - 和音キーボード</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Harmony Key</h1>
+        <div class="chord-display">
+            <span id="current-chord">C Major</span>
+            <span id="chord-notes">C - E - G</span>
+        </div>
+        
+        <div class="controls">
+            <div class="chord-type-selector">
+                <button class="chord-type" data-type="single">Single (0)</button>
+                <button class="chord-type active" data-type="major">Major (1)</button>
+                <button class="chord-type" data-type="minor">Minor (2)</button>
+                <button class="chord-type" data-type="seventh">7th (3)</button>
+                <button class="chord-type" data-type="maj7">Maj7 (4)</button>
+                <button class="chord-type" data-type="dim">Dim (5)</button>
+                <button class="chord-type" data-type="aug">Aug (6)</button>
+            </div>
+        </div>
+        
+        <div class="keyboard-guide">
+            <h3>キーボードガイド</h3>
+            <div class="key-map">
+                <span>A-L: 和音を鳴らす</span>
+                <span>0-6: 和音タイプ切替</span>
+            </div>
+        </div>
+        
+        <div class="visual-keyboard" id="visual-keyboard"></div>
+    </div>
+    
+    <script src="src/audio-engine.js"></script>
+    <script src="src/chord-manager.js"></script>
+    <script src="src/app.js"></script>
+</body>
+</html>
